@@ -1,0 +1,204 @@
+.pet-selector {
+    padding: var(--spacing-2xl) 0;
+}
+
+.pet-selector-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.pet-selector-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-heading);
+}
+
+.pet-selector-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Pet Type Cards */
+.pet-type-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-2xl);
+}
+
+.pet-type-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xl);
+    background: var(--color-bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-xl);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.pet-type-card:hover {
+    border-color: var(--color-accent-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pet-type-card.active {
+    border-color: var(--color-accent-primary);
+    background: linear-gradient(135deg,
+            rgba(186, 250, 68, 0.1) 0%,
+            rgba(159, 217, 54, 0.1) 100%);
+    box-shadow: var(--shadow-glow);
+}
+
+.pet-type-icon {
+    font-size: 3rem;
+    transition: transform var(--transition-normal);
+}
+
+.pet-type-card:hover .pet-type-icon {
+    transform: scale(1.1);
+}
+
+.pet-type-name {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    transition: color var(--transition-fast);
+}
+
+.pet-type-card:hover .pet-type-name {
+    color: var(--color-text-hover);
+}
+
+.pet-type-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-align: center;
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .pet-type-description {
+        display: block;
+    }
+}
+
+.pet-type-check {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--color-accent-gradient);
+    border-radius: 50%;
+    color: white;
+}
+
+/* Breed Selector */
+.breed-selector {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.breed-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.breed-dropdown-wrapper {
+    position: relative;
+}
+
+.breed-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.breed-dropdown-trigger:hover,
+.breed-dropdown-trigger.open {
+    border-color: var(--color-accent-primary);
+}
+
+.breed-dropdown-trigger.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.breed-dropdown-value {
+    flex: 1;
+    text-align: left;
+}
+
+.breed-dropdown-icon {
+    color: var(--color-text-muted);
+    transition: transform var(--transition-fast);
+}
+
+.breed-dropdown-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.breed-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-accent-primary);
+    border-top: none;
+    border-bottom-left-radius: var(--border-radius-md);
+    border-bottom-right-radius: var(--border-radius-md);
+    z-index: 50;
+}
+
+.breed-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-md);
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.breed-option:hover {
+    background: var(--color-bg-card);
+}
+
+.breed-option.selected {
+    background: rgba(186, 250, 68, 0.2);
+    color: var(--color-accent-primary);
+}
