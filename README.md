@@ -33,7 +33,6 @@ git clone https://github.com/your-username/sopyosa.git
 # Navigate to project directory
 cd sopyosa
 
->>>>>>> 54a624a8c0942a00a281022319260bbb3dd50b29
 # Install dependencies
 npm install
 
@@ -83,8 +82,3 @@ shopyosa/
 ├── package.json
 ├── vite.config.js
 └── README.md
-<<<<<<< HEAD
-```
-=======
-```
->>>>>>> 54a624a8c0942a00a281022319260bbb3dd50b29
