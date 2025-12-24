@@ -1,16 +1,67 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Quick Start
 
-Currently, two official plugins are available:
+### Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 18+ 
+- npm or yarn
 
-## React Compiler
+### Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Clone the repository
+git clone https://github.com/your-username/sopyosa.git
 
-## Expanding the ESLint configuration
+# Navigate to project directory
+cd sopyosa
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The production build will be in the `dist/` folder.
+
+## 📁 Project Structure
+
+```
+sopyosa/
+├── public/
+│   └── logo.png              # Site logo
+├── src/
+│   ├── components/           # React components
+│   │   ├── Header.jsx        # Navigation header
+│   │   ├── PetSelector.jsx   # Pet type & breed selection
+│   │   ├── ProductGrid.jsx   # Product listing grid
+│   │   ├── ProductCard.jsx   # Individual product cards
+│   │   ├── Cart.jsx          # Shopping cart sidebar
+│   │   └── Checkout.jsx      # Checkout page
+│   ├── data/
+│   │   ├── products.js       # Product database
+│   │   └── breeds.js         # Pet breeds data
+│   ├── hooks/
+│   │   └── useCart.js        # Cart state management
+│   ├── utils/
+│   │   └── amazonLinks.js    # Amazon URL generation
+│   ├── App.jsx               # Main app component
+│   ├── App.css               # App styles
+│   ├── index.css             # Global styles & design system
+│   └── main.jsx              # App entry point
+├── .github/
+│   └── workflows/
+│       └── deploy.yml        # GitHub Pages deployment
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
