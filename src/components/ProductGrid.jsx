@@ -37,7 +37,7 @@ export default function ProductGrid({ petType, breed }) {
             <section className="product-grid-section">
                 <div className="container">
                     <div className="product-grid-empty welcome-state">
-                        <img src="/logo.png" alt="Shopyosa" className="welcome-logo" />
+                        <img src="src\assets\icon.png" alt="Shopyosa" className="welcome-logo" />
                         <h2>Welcome to Shopyosa!</h2>
                         <p>Select your pet type above to discover amazing products curated just for your furry friend.</p>
                         <div className="welcome-pets">

@@ -18,9 +18,9 @@ export default function Header({ onCartClick, onLogoClick }) {
                         <ArrowLeft size={20} />
                     </a>
                     <button className="logo" onClick={onLogoClick}>
-                        <img src="/logo.png" alt="Shopyosa" className="logo-image" />
+                        <img src="src\assets\icon.png" alt="ShopYosa" className="logo-image" />
                         <span className="logo-text">
-                            Shop<span className="gradient-text">yosa</span>
+                            Shop<span className="gradient-text">Yosa</span>
                         </span>
                     </button>
                 </div>
