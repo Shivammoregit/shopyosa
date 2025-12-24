@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -15,6 +16,25 @@ git clone https://github.com/your-username/sopyosa.git
 # Navigate to project directory
 cd sopyosa
 
+=======
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/sopyosa.git
+
+# Navigate to project directory
+cd sopyosa
+
+>>>>>>> 54a624a8c0942a00a281022319260bbb3dd50b29
 # Install dependencies
 npm install
 
@@ -64,4 +84,8 @@ sopyosa/
 ├── package.json
 ├── vite.config.js
 └── README.md
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 54a624a8c0942a00a281022319260bbb3dd50b29
