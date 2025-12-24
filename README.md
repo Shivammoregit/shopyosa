@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -11,10 +10,10 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/sopyosa.git
+git clone https://github.com/Shivammoregit/shopyosa.git
 
 # Navigate to project directory
-cd sopyosa
+cd shopyosa
 
 =======
 
@@ -55,7 +54,7 @@ The production build will be in the `dist/` folder.
 ## 📁 Project Structure
 
 ```
-sopyosa/
+shopyosa/
 ├── public/
 │   └── logo.png              # Site logo
 ├── src/
