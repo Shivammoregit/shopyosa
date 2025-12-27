@@ -2,21 +2,36 @@ import { ShoppingCart, ArrowLeft } from 'lucide-react';
 import { useCart, getCartItemCount } from '../hooks/useCart';
 import './Header.css';
 
-export default function Header({ onCartClick, onLogoClick }) {
+export default function Header({ onCartClick, onLogoClick, currentView, onBackClick }) {
     const { items } = useCart();
     const itemCount = getCartItemCount(items);
+
+    // Back button behavior based on current view
+    const handleBackClick = () => {
+        if (currentView === 'checkout') {
+            // In checkout -> go back to shopping
+            onBackClick();
+        } else {
+            // In dashboard -> go to petyosa.com
+            window.location.href = 'https://petyosa.com';
+        }
+    };
+
+    const backButtonTitle = currentView === 'checkout'
+        ? 'Back to Shopping'
+        : 'Back to Petyosa';
 
     return (
         <header className="header">
             <div className="container header-content">
                 <div className="header-left">
-                    <a
-                        href="https://petyosa.com"
+                    <button
                         className="back-button"
-                        title="Back to Petyosa"
+                        onClick={handleBackClick}
+                        title={backButtonTitle}
                     >
                         <ArrowLeft size={20} />
-                    </a>
+                    </button>
                     <button className="logo" onClick={onLogoClick}>
                         <img src="src\assets\icon.png" alt="ShopYosa" className="logo-image" />
                         <span className="logo-text">

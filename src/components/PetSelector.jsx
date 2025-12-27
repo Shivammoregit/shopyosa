@@ -78,10 +78,11 @@ export default function PetSelector({
                             {isBreedOpen && (
                                 <div className="breed-dropdown-menu animate-fadeIn">
                                     <button
-                                        className={`breed-option ${!selectedBreed ? 'selected' : ''}`}
-                                        onClick={() => handleBreedSelect(null)}
+                                        className={`breed-option ${selectedBreed?.id === 'all' ? 'selected' : ''}`}
+                                        onClick={() => handleBreedSelect({ id: 'all', name: 'All Breeds' })}
                                     >
                                         All Breeds
+                                        {selectedBreed?.id === 'all' && <Check size={16} />}
                                     </button>
                                     {breeds.map((breed) => (
                                         <button

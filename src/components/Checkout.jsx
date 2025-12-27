@@ -16,15 +16,6 @@ export default function Checkout({ onBack }) {
         openOnAmazon(item);
     };
 
-    const handleBuyAll = () => {
-        // Open each item on Amazon in a new tab
-        items.forEach((item, index) => {
-            setTimeout(() => {
-                openOnAmazon(item);
-            }, index * 500); // Stagger tab openings
-        });
-    };
-
     if (items.length === 0) {
         return (
             <section className="checkout-section">
@@ -46,11 +37,6 @@ export default function Checkout({ onBack }) {
     return (
         <section className="checkout-section">
             <div className="container">
-                <button className="checkout-back" onClick={onBack}>
-                    <ArrowLeft size={18} />
-                    Back to Shopping
-                </button>
-
                 <div className="checkout-layout">
                     {/* Order Summary */}
                     <div className="checkout-items">
@@ -103,10 +89,6 @@ export default function Checkout({ onBack }) {
                                     <span>Shipping</span>
                                     <span className="text-success">Free via Amazon</span>
                                 </div>
-                                <div className="checkout-summary-row">
-                                    <span>Estimated Tax</span>
-                                    <span>Calculated at Amazon</span>
-                                </div>
                             </div>
 
                             <div className="checkout-summary-total">
@@ -114,17 +96,9 @@ export default function Checkout({ onBack }) {
                                 <span className="checkout-total-value">₹{total.toLocaleString('en-IN')}</span>
                             </div>
 
-                            <button
-                                className="btn btn-primary checkout-buy-all"
-                                onClick={handleBuyAll}
-                            >
-                                <ExternalLink size={18} />
-                                Buy All on Amazon
-                            </button>
-
                             <div className="checkout-info">
                                 <p>
-                                    <strong>How it works:</strong> Clicking the button will open each product on Amazon where you can complete your purchase securely.
+                                    <strong>How it works:</strong> Click "Buy on Amazon" for each product to complete your purchase securely on Amazon.
                                 </p>
                                 <div className="checkout-badges">
                                     <span className="checkout-badge">🔒 Secure Checkout</span>

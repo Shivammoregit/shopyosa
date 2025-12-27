@@ -17,8 +17,8 @@ export default function ProductGrid({ petType, breed }) {
             filtered = filtered.filter(p => p.category === selectedCategory);
         }
 
-        // If breed has a size, prioritize products for that size
-        if (breed?.size) {
+        // If breed has a size (not "All Breeds"), prioritize products for that size
+        if (breed?.id !== 'all' && breed?.size) {
             filtered = filtered.sort((a, b) => {
                 const aMatch = a.sizes?.includes(breed.size) || a.sizes?.includes('all');
                 const bMatch = b.sizes?.includes(breed.size) || b.sizes?.includes('all');

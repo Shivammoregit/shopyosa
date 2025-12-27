@@ -110,6 +110,8 @@
 .breed-selector {
     max-width: 400px;
     margin: 0 auto;
+    position: relative;
+    z-index: 100;
 }
 
 .breed-label {
@@ -169,14 +171,15 @@
     top: 100%;
     left: 0;
     right: 0;
-    max-height: 300px;
+    max-height: 400px;
     overflow-y: auto;
     background: var(--color-bg-tertiary);
     border: 1px solid var(--color-accent-primary);
     border-top: none;
     border-bottom-left-radius: var(--border-radius-md);
     border-bottom-right-radius: var(--border-radius-md);
-    z-index: 50;
+    z-index: 150;
+    box-shadow: var(--shadow-lg);
 }
 
 .breed-option {

@@ -31,8 +31,8 @@
     background: transparent;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-md);
-    text-decoration: none;
     transition: all var(--transition-fast);
+    cursor: pointer;
 }
 
 .back-button:hover {

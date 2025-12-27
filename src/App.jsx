@@ -37,6 +37,8 @@ function App() {
       <Header
         onCartClick={() => setIsCartOpen(true)}
         onLogoClick={handleLogoClick}
+        currentView={view}
+        onBackClick={handleBackToShopping}
       />
 
       <main className="main-content">
